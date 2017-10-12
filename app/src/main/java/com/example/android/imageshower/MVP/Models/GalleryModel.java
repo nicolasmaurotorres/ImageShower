@@ -19,23 +19,14 @@ public class GalleryModel {
 
     public GalleryModel(Context mContext){
 
-        Uri picture1 = getUriToDrawable(mContext, R.mipmap.red_hair_1);
-        Uri picture2 = getUriToDrawable(mContext, R.mipmap.red_hair_2);
-        Uri picture3 = getUriToDrawable(mContext, R.mipmap.red_hair_3);
-        Uri picture4 = getUriToDrawable(mContext, R.mipmap.red_hair_4);
-        Uri picture5 = getUriToDrawable(mContext, R.mipmap.red_hair_5);
-        Uri picture6 = getUriToDrawable(mContext, R.mipmap.red_hair_6);
-        Uri picture7 = getUriToDrawable(mContext, R.mipmap.red_hair_7);
-        Uri picture8 = getUriToDrawable(mContext, R.mipmap.red_hair_8);
-
-        Girl girl1 = new Girl("Susana Gimenez",picture1);
-        Girl girl2 = new Girl("Wanda Nara",picture2);
-        Girl girl3 = new Girl("Zaira Nara",picture3);
-        Girl girl4 = new Girl("Mirtha Legrand",picture4);
-        Girl girl5 = new Girl("Sofia Gala",picture5);
-        Girl girl6 = new Girl("Moria Casan",picture6);
-        Girl girl7 = new Girl("Ivana Nadal",picture7);
-        Girl girl8 = new Girl("Naiara Awada",picture8);
+        Girl girl1 = new Girl("Susana Gimenez"  ,R.mipmap.red_hair_1);
+        Girl girl2 = new Girl("Wanda Nara"      ,R.mipmap.red_hair_2);
+        Girl girl3 = new Girl("Zaira Nara"      ,R.mipmap.red_hair_3);
+        Girl girl4 = new Girl("Mirtha Legrand"  ,R.mipmap.red_hair_4);
+        Girl girl5 = new Girl("Sofia Gala"      ,R.mipmap.red_hair_5);
+        Girl girl6 = new Girl("Moria Casan"     ,R.mipmap.red_hair_6);
+        Girl girl7 = new Girl("Ivana Nadal"     ,R.mipmap.red_hair_7);
+        Girl girl8 = new Girl("Naiara Awada"    ,R.mipmap.red_hair_8);
 
         adapter = new MyAdapter(new Girl[]{girl1,girl2,girl3,girl4,girl5,girl6,girl7,girl8},mContext);
     }
@@ -43,13 +34,4 @@ public class GalleryModel {
     public MyAdapter getAdapter(){
         return adapter;
     }
-
-    private static Uri getUriToDrawable(@NonNull Context context, @AnyRes int drawableId) {
-        return Uri.parse(ContentResolver.SCHEME_ANDROID_RESOURCE +
-                "://" + context.getResources().getResourcePackageName(drawableId)
-                + '/' + context.getResources().getResourceTypeName(drawableId)
-                + '/' + context.getResources().getResourceEntryName(drawableId) );
-    }
-
-
 }

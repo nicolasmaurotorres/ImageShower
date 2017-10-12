@@ -26,7 +26,6 @@ public class GalleryView extends ActivityView {
         // use a linear layout manager
         RecyclerView.LayoutManager mLayoutManager = new LinearLayoutManager(getActivity());
         mRecyclerView.setLayoutManager(mLayoutManager);
-
     }
 
 

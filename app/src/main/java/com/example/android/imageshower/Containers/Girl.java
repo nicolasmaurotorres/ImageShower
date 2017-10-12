@@ -1,21 +1,19 @@
 package com.example.android.imageshower.Containers;
 
-import android.net.Uri;
-
 public class Girl {
     private String name;
-    private Uri image;
+    private int imageId;
 
-    public Girl(String name, Uri image) {
+    public Girl(String name, int imageId) {
         this.name = name;
-        this.image = image;
+        this.imageId = imageId;
     }
 
     public String getName() {
         return name;
     }
 
-    public Uri getImage() {
-        return image;
+    public int getImage() {
+        return imageId;
     }
 }
